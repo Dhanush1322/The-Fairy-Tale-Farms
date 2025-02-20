@@ -294,30 +294,56 @@
                                 <div class="con-title text-center">
                                     <h4 class="mb-35">Write Us Something</h4>
                                 </div>
-                                <form action="https://ethemestudio.com/demo/rovero/php/mail.php" method="POST" id="contact-form">
+                                <form id="contact-form">
                                     <div class="contact-info text-md-center text-lg-left pt-20">
                                         <div class="row">
-                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3" data-aos="fade-up" data-aos-duration="2000">
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
                                                 <input class="form-input" type="text" name="inputName" id="inputName" placeholder="Your Name" required>
                                             </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3" data-aos="fade-up" data-aos-duration="2500">
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
                                                 <input class="form-input" type="email" name="inputEmail" id="inputEmail" placeholder="Your Email" required>
                                             </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3" data-aos="fade-up" data-aos-duration="2000">
-                                                <input class="form-input" type="text" name="inputWebsite" id="inputWebsite" placeholder="Website" required>
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
+                                                <input class="form-input" type="tel" name="inputPhone" id="inputPhone" placeholder="Phone Number" required>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3" data-aos="fade-up" data-aos-duration="2000">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
                                                 <textarea class="form-textarea" name="inputMessage" id="inputMessage" placeholder="Write your comment here" required></textarea>
                                             </div>
                                         </div>
                                         <div class="my-btn w-100 text-center">
-                                            <button class="form-button" type="submit" name="submit" data-aos="fade-up" data-aos-duration="2500" >Submit Now</button>
+                                            <button class="form-button" type="submit">Submit Now</button>
                                         </div>
                                     </div>
                                 </form>
-                                <p class="form-message mt-20"></p>
+                                
+                                <script>
+                                document.getElementById("contact-form").addEventListener("submit", function(event) {
+                                    event.preventDefault(); // Prevent form submission
+                                
+                                    // Get form values
+                                    let name = document.getElementById("inputName").value;
+                                    let email = document.getElementById("inputEmail").value;
+                                    let phone = document.getElementById("inputPhone").value;
+                                    let message = document.getElementById("inputMessage").value;
+                                
+                                    // Construct WhatsApp message
+                                    let whatsappMessage = `Hello, I would like to contact you.
+                                    Name: ${name}
+                                    Email: ${email}
+                                    Phone: ${phone}
+                                    Message: ${message}`;
+                                
+                                    // Encode message for URL
+                                    let encodedMessage = encodeURIComponent(whatsappMessage);
+                                
+                                    // Redirect to WhatsApp
+                                    let whatsappURL = `https://wa.me/91809514896?text=${encodedMessage}`;
+                                    window.location.href = whatsappURL;
+                                });
+                                </script>
+                                 <p class="form-message mt-20"></p>
                             </div>
                         </div>
                     </div>
