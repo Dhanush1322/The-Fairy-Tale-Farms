@@ -25,6 +25,71 @@
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+   .about-flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.about-content {
+    width: 40%;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Image Container */
+.about-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Adjusts height dynamically */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-flex-container {
+        flex-direction: column; /* Stacks content */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content, .about-image {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .about-content p {
+        font-size: 14px; /* Slightly smaller text for readability */
+    }
+
+    .about-image img {
+        height: 250px; /* Adjust height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content p {
+        font-size: 13px; /* Further size reduction */
+    }
+
+    .about-image img {
+        height: 200px; /* Smaller height for mobile */
+    }
+}
+
+
+    </style>
 </head>
 
 <body>
@@ -45,103 +110,104 @@
         </div>
     </div><!-- /preloader -->
 
- <!--  ====== header-area-start =======================================  -->
- <header>
-    <div class="transparent-header header-area hm2">
-        <div class="header">
-            <div class="header-top pt-12">
-                <div class="container">
-                    <div class="row">
+ 
+    <!--  ====== header-area-start =======================================  -->
+    <header>
+        <div class="transparent-header header-area hm2">
+            <div class="header">
+                <div class="header-top pt-12">
+                    <div class="container">
+                        <div class="row">
 
-                        <div class="col-xl-7  col-lg-7  col-md-7  col-sm-12 col-12 d-flex align-items-center">
-                            <div class="header-top-left d-none d-md-block">
-                                <ul class="d-flex align-items-center">
-                                    <li>
-                                        <a href="#"><span class="pr-2"><i
-                                                    class="fa-solid fa-phone"></i></span>+91 80951 48961</a>
-                                    </li>
-                                    <li class="before-effect">
-                                        <a href="#"><span class="pr-2"><i
-                                                    class="fa-regular fa-envelope"></i></span>thefairytalefarms@gmail.com</a>
-                                    </li>
-                                </ul>
-                            </div><!-- /header-top-left -->
-                        </div><!-- /col -->
-
-                    </div><!-- /row -->
-                </div><!-- /container -->
-            </div><!-- /header-top -->
-
-            <div id="header-sticky" class="header-bottom">
-                <div class="container">
-                    <div class="row align-items-center justify-content-between position-relative">
-                        <div class="col-xl-3 col-lg-2 col-md-3 col-sm-5 col-5 pr-0">
-                            <div class="logo">
-                                <a href="index.html" class="d-block"><img src="logo/logo (1).jpeg"
-                                        alt="ROVERO" style="width:140px;"></a>
-                            </div>
-                        </div><!-- /col -->
-
-                        <div
-                            class="col-xl-9 col-lg-10 col-md-9 col-sm-7 col-7 pl-0 d-flex justify-content-end position-static">
-
-                            <div class="main-menu">
-                                <nav id="mobile-menu">
-                                    <ul class="d-block">
-                                        <li><a href="index.html" style="color: #e7ae5f !important;">Home</a></li><!-- /Contact -->
-                                        <li><a href="about.html" style="color: #e7ae5f !important;">About</a></li><!-- /Contact -->
-                                        <li><a href="javascript:void(0);" style="color: #e7ae5f !important;">Gallery</a>
-                                            <ul class="mega-menu mega-dropdown-menu white-bg ml-0">
-                                                <li><a href="kanakpura.html">Kanakapura Road Property</a></li>
-                                                <li><a href="bannergatta.html">Bannerghatta Property</a></li>
-                                              
-                                            </ul>
+                            <div class="col-xl-7  col-lg-7  col-md-7  col-sm-12 col-12 d-flex align-items-center">
+                                <div class="header-top-left d-none d-md-block">
+                                    <ul class="d-flex align-items-center">
+                                        <li>
+                                            <a href="#"><span class="pr-2"><i
+                                                        class="fa-solid fa-phone"></i></span>+91 80951 48961</a>
                                         </li>
-                                        <li><a href="contact.html" style="color: #e7ae5f !important;">Contact Us</a></li><!-- /Contact -->
-                                        
-
-                                     
-                                        
-                                       
+                                        <li class="before-effect">
+                                            <a href="#"><span class="pr-2"><i
+                                                        class="fa-regular fa-envelope"></i></span>thefairytalefarms@gmail.com</a>
+                                        </li>
                                     </ul>
-                                </nav>
-                            </div><!-- /main-menu -->
-                           
-                            <div class="header-right d-flex align-items-center justify-content-end pl-25">
+                                </div><!-- /header-top-left -->
+                            </div><!-- /col -->
 
-                                <ul class="social-link header-social d-none d-md-inline-block">
-                                    <li class="d-inline-block mr-10">
-                                        <a class="facebook-color text-center d-inline-block transition-3"
-                                            href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li class="d-inline-block mr-10">
-                                        <a class="instagram-color text-center d-inline-block transition-3"
-                                            href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                    <li class="d-inline-block mr-10">
-                                        <a class="twitter-color text-center d-inline-block transition-3" href="#"><i
-                                                class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li class="d-inline-block mr-10">
-                                        <a class="linked-in-color text-center d-inline-block transition-3"
-                                            href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    </li>
-                                </ul><!-- social-link -->
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+                </div><!-- /header-top -->
 
-                                <div class="d-block d-lg-none pl-20">
-                                   <a class="mobile-menubar text-white" href="javascript:void(0);"><i
-                                            class="fa-solid fa-bars"></i></a>
-                                </div><!-- /mobile-menubar -->
-                            </div><!-- /header-right -->
+                <div id="header-sticky" class="header-bottom">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between position-relative">
+                            <div class="col-xl-3 col-lg-2 col-md-3 col-sm-5 col-5 pr-0">
+                                <div class="logo">
+                                    <a href="index.html" class="d-block"><img src="logo/logo (1).jpeg"
+                                            alt="ROVERO" style="width:140px;"></a>
+                                </div>
+                            </div><!-- /col -->
 
-                        </div><!-- /col -->
-                    </div><!-- /row -->
-                </div><!-- /container -->
-            </div><!-- /header-bottom -->
-        </div>
-    </div><!-- /header-bottom -->
-</header>
-<!--  header-area-end  -->
+                            <div
+                                class="col-xl-9 col-lg-10 col-md-9 col-sm-7 col-7 pl-0 d-flex justify-content-end position-static">
+
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul class="d-block">
+                                            <li><a href="index.html" style="color: #e7ae5f !important;">Home</a></li><!-- /Contact -->
+                                            <li><a href="about.html" style="color: #e7ae5f !important;">Events</a></li><!-- /Contact -->
+                                            <li><a href="javascript:void(0);" style="color: #e7ae5f !important;">Gallery</a>
+                                                <ul class="mega-menu mega-dropdown-menu white-bg ml-0">
+                                                    <li><a href="kanakpura.html">Kanakapura Road Property</a></li>
+                                                    <li><a href="bannergatta.html">Bannerghatta Property</a></li> 
+                                                    
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html" style="color: #e7ae5f !important;">Contact Us</a></li><!-- /Contact -->
+                                            
+
+                                         
+                                            
+                                           
+                                        </ul>
+                                    </nav>
+                                </div><!-- /main-menu -->
+                               
+                                <div class="header-right d-flex align-items-center justify-content-end pl-25">
+
+                                    <ul class="social-link header-social d-none d-md-inline-block">
+                                        <li class="d-inline-block mr-10">
+                                            <a class="facebook-color text-center d-inline-block transition-3"
+                                                href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="d-inline-block mr-10">
+                                            <a class="instagram-color text-center d-inline-block transition-3"
+                                                href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                        <li class="d-inline-block mr-10">
+                                            <a class="twitter-color text-center d-inline-block transition-3" href="#"><i
+                                                    class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                        <li class="d-inline-block mr-10">
+                                            <a class="linked-in-color text-center d-inline-block transition-3"
+                                                href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul><!-- social-link -->
+
+                                    <div class="d-block d-lg-none pl-20">
+                                       <a class="mobile-menubar text-white" href="javascript:void(0);"><i
+                                                class="fa-solid fa-bars"></i></a>
+                                    </div><!-- /mobile-menubar -->
+                                </div><!-- /header-right -->
+
+                            </div><!-- /col -->
+                        </div><!-- /row -->
+                    </div><!-- /container -->
+                </div><!-- /header-bottom -->
+            </div>
+        </div><!-- /header-bottom -->
+    </header>
+    <!--  header-area-end  -->
 
 
 <!--  ====== header extra info start ================================== -->
@@ -202,7 +268,7 @@
         <!-- ====== inner-page-hero-area-start =========================================== -->
         <div class="inner-page-hero-area">
             <div class="inner-page-height inner-page-bg d-flex align-items-center position-relative black-overly"
-                data-background="images/about-page/about-page-hero.jpg">
+                data-background="img/k8.jpeg">
 
                 <div class="container">
                     <div class="row">
@@ -211,7 +277,7 @@
                             <div class="inner-page-content text-center">
 
                                 <h1 class="text-white mb-20 text-capitalize aos-init" data-aos="fade-up"
-                                    data-aos-duration="1800" data-aos-delay="50">About Us</h1>
+                                    data-aos-duration="1800" data-aos-delay="50">Events</h1>
                               </div>
                         </div><!-- /col -->
 
@@ -222,7 +288,7 @@
                     <ol class="breadcrumb justify-content-center bg-transparent">
                         <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item active text-capitalize text-white" aria-current="page">About</li>
+                        <li class="breadcrumb-item active text-capitalize text-white" aria-current="page">Events</li>
                     </ol>
                 </nav><!-- /breadcrumb -->
 
@@ -231,42 +297,36 @@
         <!-- inner-page-hero-area-end  -->
 
 
-        <!-- ====== about-page-area-start =============================================== -->
-        <div class="about-page-area mt-115">
-            <div class="container">
-
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10  col-md-12  col-sm-12 col-12">
-                        <div class="section-content-title text-center">
-                            <span class="text-uppercase theme-color f-700 fontNoto pb- d-block mb-6">We are
-                                awesome</span>
-                            <h2 class="mb-0">Welcome to  The Fairy Tale Farms</h2>
-                        </div><!-- /section-title -->
-                    </div><!-- /col -->
-                </div><!-- /row -->
-
-                <div class="row about-page-wrapper d-flex mt-55">
-
-                    <div class="col-xl-5  col-lg-6 col-md-5  col-sm-12 col-12">
-                        <div class="about-page-left position-relative">
-                            <h6>Vision </h6>
-                            <p>To create a welcoming and inclusive space where people can relax and connect with the joy of companion animals, fostering a sense of community and happiness. </p>
-                        </div><!-- /about-page-left -->
-                    </div><!-- /col -->
-
-                    <div class="col-xl-6 offset-xl-1  col-lg-6 col-md-7  col-sm-12 col-12">
-                        <div class="about-page-right">
-                            <h6>Mission
-
-                            </h6>
-                            <p class="mb-30">Our mission is to provide a pet-friendly cafe experience that promotes relaxation, positivity, and companionship. We strive to offer a safe and comfortable environment where guests can unwind, enjoy quality time with friendly dogs, and build lasting memories. Through our cafe, we aim to spread happiness, encourage animal welfare awareness, and create a sense of belonging for all who visit. We are committed to delivering exceptional service, delicious refreshments, and unforgettable moments of joy with our canine companions. </p>
-                          </div><!-- /about-page right -->
-                    </div><!-- /col -->
-
-                </div><!-- /row -->
-
-            </div><!-- /container -->
+      <!-- ====== about-page-area-start =============================================== -->
+<div class="about-page-area mt-115">
+    <div class="container">
+        <div class="about-flex-container">
+            <!-- Left Side Content -->
+            <div class="about-content">
+                <p>
+                    Tucked away from the rest of the world with just nature for company, The FairyTale Farms stands as the perfect 
+                    destination for Birthday parties, Get-togethers, Brunches, Special Occasions, Conferences, and DJ nights.
+                </p>
+                <p>
+                    Ideal ambience to relax and be refreshed at the end of the day. Allow us at The FairyTale Farms to help you 
+                    celebrate your precious time lazing around. The FairyTale Farms offers umpteen picture-perfect settings in the 
+                    evening that ascertain enchantment and natural elegance.
+                </p>
+                <p>
+                    Be it Lush green Lawns surrounded by abundant greenery or sip a Coffee by the poolside with the setting 
+                    sun as your witness, we give you a choice of spectacular scenes to relax your mind.
+                </p>
+            </div>
+            
+            <!-- Right Side Multiple Images -->
+            <div class="about-image">
+                <img id="slideshow" src="banner/bb1.jpeg" alt="Cafe Zorros Image" />
+            </div>
+            
         </div>
+    </div><!-- /container -->
+</div>
+ 
         <!-- about-page-area-end  -->
 
 
@@ -399,7 +459,19 @@
     </div><!-- /scroll-up -->
 
 
-
+    <script>
+        const images = ["banner/bb1.jpeg", "banner/bb2.jpeg", "banner/bb3.jpeg","img/bbb18.jpeg",];
+        let currentIndex = 0;
+        const imgElement = document.getElementById("slideshow");
+    
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop through images
+            imgElement.src = images[currentIndex];
+        }
+    
+        setInterval(changeImage, 2000); // Change image every 2 seconds
+    </script>
+    
     <!-- All js here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
